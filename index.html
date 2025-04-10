@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio Latansa Bima Amanta</title>
+
+        <!-- Link to style.css -->
+         <link rel="stylesheet" href="css/style.css" />
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                darkMode: 'class', // agar dark mode bisa memakai class "dark"
+            };
+        </script>
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+    <body class="bg-gray-200 text-gray-900 font-sans dark:bg-gray-900 dark:text-gray-100">
+        <header class="bg-gray-100 flex flex-col items-center py-5 dark:bg-gray-800 dark:text-white">
+            <img src="img/foto_profile.jpeg" alt="Foto Saya" class="w-48 h-48 rounded-full shadow-lg object-cover" />
+            <h1 class="text-3xl font-bold mt-4">Halo, Saya Latansa Bima Amanta</h1>
+            <p class="text-md mt-2 text-gray-600 dark:text-white">Web Developer | AIoT & Cyber Security Enthusiast</p>
+        </header>
+        <main class="max-w-3xl mx-auto px-4">
+            <!-- About -->
+            <section class="my-6 dark:text-gray-300" data-aos="fade-down">
+                <h2 class="text-2xl font-semibold mb-5 text-center">Tentang Saya</h2>
+                <p class="text-justify">
+                    Mahasiswa teknik informatika semester enam dengan minat besar dalam pengembangan web,
+                    serta ketertarikan pada AIoT dan keamanan siber. Saya selalu bersemangat untuk belajar dan
+                    beradaptasi dengan tantangan baru. Saya mampu bekerja baik dalam tim maupun secara individu,
+                    dengan mengutamakan keandalan, komunikasi efektif, dan pola pikir pemecahan masalah dalam
+                    setiap proyek yang saya kerjakan
+                </p>
+            </section>
+            <!-- End About -->
+
+            <!-- Timeline Karir -->
+            <section id="timeline" class="my-20">
+                <h2 class="text-2xl font-semibold mb-12 text-center">Perjalanan Karier</h2>
+              
+                <div class="relative max-w-4xl mx-auto">
+                  <!-- Garis Tengah -->
+                  <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-600 z-0"></div>
+              
+                  <!-- Container Items -->
+                  <div id="timeline-items" class="flex flex-col gap-3 relative z-10">
+                    <!-- Item 1 -->
+                    <div class="flex justify-start relative">
+                      <div class="w-1/2 pr-8 text-right">
+                        <div class="bg-white shadow-md p-5 rounded-xl dark:bg-gray-800" data-aos="fade-right">
+                          <h3 class="text-lg font-bold">2020 - Magang di XYZ</h3>
+                          <p class="text-sm text-gray-600 dark:text-gray-300">Belajar pengembangan frontend & kerja tim kecil.</p>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- Item 2 -->
+                    <div class="flex justify-end relative">
+                      <div class="w-1/2 pl-8 text-left">
+                        <div class="bg-white shadow-md p-5 rounded-xl dark:bg-gray-800" data-aos="fade-left">
+                          <h3 class="text-lg font-bold">2021 - Freelance Web Developer</h3>
+                          <p class="text-sm text-gray-600 dark:text-gray-300">Membuat website portofolio dan toko online klien.</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="flex justify-start relative">
+                        <div class="w-1/2 pr-8 text-right">
+                          <div class="bg-white shadow-md p-5 rounded-xl dark:bg-gray-800" data-aos="fade-right">
+                            <h3 class="text-lg font-bold">2020 - Magang di XYZ</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Belajar pengembangan frontend & kerja tim kecil.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    <!-- Item 4 -->
+                    <div class="flex justify-end relative">
+                        <div class="w-1/2 pl-8 text-left">
+                          <div class="bg-white shadow-md p-5 rounded-xl dark:bg-gray-800" data-aos="fade-left">
+                            <h3 class="text-lg font-bold">2021 - Freelance Web Developer</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Membuat website portofolio dan toko online klien.</p>
+                          </div>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+              </section>
+                                          
+            <!-- End Timeline Karir -->
+
+            <!-- Bagian Card Proyek -->
+            <section class="my-12 pt-5 pb-5">
+                <h2 class="text-2xl font-semibold mb-6 text-center">Portofolio Proyek</h2>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Proyek 1 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-gray-100" data-aos="zoom-in" data-aos-delay="50">
+                        <img src="img/proyek1.png" alt="Proyek 1" class="w-full h-48 object-cover" />
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold mb-2">Sistem Informasi Magang "Internify"</h3>
+                            <p class="text-gray-600 text-sm mb-3 dark:text-gray-300">Sistem informasi berbasis website dan mobile untuk pengelolaan administrasi magang Jurusan Teknologi Informasi Politeknik Negeri Jember.</p>
+                            <a href="#" class="text-blue-600 text-sm hover:underline">Lihat Proyek</a>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 2 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-gray-100" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="img/proyek2.png" alt="Proyek 2" class="w-full h-48 object-cover" />
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold mb-2">Sistem Informasi Competition Center</h3>
+                            <p class="text-gray-600 text-sm mb-3 dark:text-gray-300">Sistem informasi berbasis website dan mobile untuk pengelolaan berbagai perlombaan Jurusan Teknologi Informasi Politeknik Negeri Jember.</p>
+                            <a href="#" class="text-blue-600 text-sm hover:underline">Lihat Proyek</a>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 3 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-gray-100" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="img/proyek3.png" alt="Proyek 3" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold mb-2">Smart Air Presence System</h3>
+                            <p class="text-gray-600 text-sm mb-3 dark:text-gray-300">Sistem untuk mengatur suhu ruangan secara otomatis berdasarkan jumlah orang disuatu ruangan menggunakan Face Recognition dan IoT.</p>
+                            <a href="#" class="text-blue-600 text-sm hover:underline">Lihat Proyek</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Card Proyek -->
+
+            <!-- Bagian Kontak -->
+            <section class="my-12 bg-white p-8 rounded-xl shadow-md dark:bg-gray-800 dark:text-gray-100" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="text-2xl font-semibold mb-4 text-center">Hubungi Saya</h2>
+
+                <div class="text-center space-y-4">
+                    <p class="text-gray-700 dark:text-white">Jika anda tertarik untuk bekerja sama atau ingin ngobrol santai, Hubungi saya melalui:</p>
+
+                    <div class="space-y-2">
+                        <p>
+                            Email:
+                            <a href="mailto:bima.iris758@gmail.com" class="text-blue-600 hover:underline">bima.iris758@gmail.com</a>
+                        </p>
+
+                        <p>
+                            Whatsapp:
+                            <a href="https://wa.me/6282264958427" class="text-blue-600 hover:underline" target="_blank">+62 822-6495-8427</a>
+                        </p>
+
+                        <p>
+                            Instagram:
+                            <a href="https://instagram.com/latansa_bima" class="text-blue-600 hover:underline" target="_blank">@latansa_bima</a>
+                        </p>
+
+                        <p>
+                            LinkedIn:
+                            <a href="https://www.linkedin.com/in/latansa-bima" class="text-blue-600 hover:underline" target="_blank">Latansa Bima Amanta</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- End Bagian Kontak -->
+
+            <!-- Button Dark Mode -->
+            <button id="darkMode" class="fixed bottom-5 left-5 bg-gray-800 text-white px-4 py-2 rounded-full dark:bg-gray-200 dark:text-gray-800 z-50">
+                Toggle 🌙 | ☀️
+            </button>
+            <!-- End Button Dark -->
+
+            <!-- Button Scroll to Top -->
+            <button id="scrollTopBtn" class="fixed bottom-5 right-5 hidden bg-gray-800 text-white px-4 py-2 rounded-full dark:bg-gray-200 dark:text-gray-800">
+                Scroll ⬆
+            </button>
+            <!-- End Button Scroll -->
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center text-sm py-6 text-gray-500 dark:text-gray-400">
+            &copy; 2025 Latansa Bima Amanta
+        </footer>
+        <!-- End Footer -->
+
+        <!-- Link to js file -->
+        <script src="js/script.js"></script>
+
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,21 @@
+@keyframes ping-slow {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+    .animate-ping-slow {
+        position: absolute;
+        top: -7px;
+        left: -7px;
+        width: 24px;
+        height: 24px;
+        border-radius: 9999px;
+        background-color: rgba(59, 130, 246, 0.5);
+        animation: ping-slow 2s ease-out infinite;
+        z-index: -1;
+    }
