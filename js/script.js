@@ -61,3 +61,30 @@ document.addEventListener("DOMContentLoaded", () => {
         dot.appendChild(ping);
     });
 });
+
+
+// TABS UI
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content-item');
+
+tabButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const target = button.getAttribute('data-tab');
+
+    // Reset button style
+    tabButtons.forEach(btn => {
+      btn.classList.remove('bg-gray-300', 'dark:bg-gray-700');
+      btn.classList.add('bg-gray-200', 'dark:bg-gray-600');
+    });
+
+    // Active style
+    button.classList.remove('bg-gray-200', 'dark:bg-gray-600');
+    button.classList.add('bg-gray-300', 'dark:bg-gray-700');
+
+    // Show correct content
+    tabContents.forEach(content => {
+      content.classList.add('hidden');
+    });
+    document.getElementById(target).classList.remove('hidden');
+  });
+});
