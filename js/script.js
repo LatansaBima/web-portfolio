@@ -34,6 +34,22 @@ if(localStorage.getItem("theme") === "dark") {
 }
 
 
+// Typing Writer Effect
+const text = "Halo, Saya Latansa Bima Amanta";
+  const target = document.getElementById("typing-text");
+  let index = 0;
+
+  function typeText() {
+    if (index < text.length) {
+      target.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeText, 70); // kecepatan mengetik (ms)
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", typeText);
+
+
 // Script Titik Otomatis di Timeline Karir
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector("#timeline-items");
