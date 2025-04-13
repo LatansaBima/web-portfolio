@@ -99,7 +99,7 @@
               
                 <!-- Tabs -->
                 <div class="flex justify-center mb-6 flex-wrap gap-2">
-                    <button class="tab-btn px-4 py-2 rounded-lg font-medium bg-gray-300 text-black dark:bg-gray-700 dark:text-white" data-tab="portfolio">Portofolio</button>
+                    <button class="tab-btn px-4 py-2 rounded-lg font-medium bg-gray-300 text-black dark:bg-gray-700 dark:text-white" data-tab="portfolio">Projek</button>
                     <button class="tab-btn px-4 py-2 rounded-lg font-medium bg-gray-200 text-black dark:bg-gray-600 dark:text-white" data-tab="sertifikasi">Sertifikasi</button>
                     <button class="tab-btn px-4 py-2 rounded-lg font-medium bg-gray-200 text-black dark:bg-gray-600 dark:text-white" data-tab="techstack">Techstack</button>
                     <button class="tab-btn px-4 py-2 rounded-lg font-medium bg-gray-200 text-black dark:bg-gray-600 dark:text-white" data-tab="awardee">Awardee</button>
@@ -107,82 +107,166 @@
               
                 <!-- Tabs Content -->
                 <div id="tab-content" class="space-y-6">
+                    <!-- Modal viewer -->
+                    <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-80 px-4">
+                        <div class="relative bg-white dark:bg-gray-900 rounded-xl max-w-3xl w-full p-4 shadow-xl space-y-4">
+                        <!-- Close button -->
+                        <span onclick="closeModal()" class="absolute top-2 right-3 text-2xl text-gray-800 dark:text-white cursor-pointer">&times;</span>
+                        
+                        <!-- Image -->
+                        <img id="modalImage" src="" alt="" class="w-full h-auto rounded-lg">
+                    
+                        <!-- Description -->
+                        <div class="max-h-60 overflow-y-auto border-t pt-2">
+                            <p id="modalDesc" class="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
+                            <!-- dynamic content here -->
+                            </p>
+                        </div>
+                        </div>
+                    </div>
                     <!-- PORTOFOLIO -->
                     <div class="tab-content-item" id="portfolio">
                         <div class="grid md:grid-cols-2 gap-6">
+                            <!-- CARD 1 -->
                             <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                              <img src="img/porto_internify.png" alt="Internify Project" class="w-full h-40 object-cover">
-                              <div class="p-4">
+                                <img src="img/projek/porto_internify.png"
+                                    alt="Internify Project"
+                                    class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                                    onclick="openModal(this)"
+                                    data-desc="Internify adalah platform informasi magang berbasis web dan mobile. Fitur-fiturnya termasuk chatbot, pengajuan proposal, pencarian tempat magang, dan AI pendukung keputusan.">
+                                <div class="p-4">
                                 <h3 class="text-lg font-semibold mb-2">Sistem Informasi Magang "Internify"</h3>
                                 <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
                                 <div class="space-x-1">
-                                  <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded">Laravel</span>
-                                  <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded">Flutter</span>
-                                </div>
-                              </div>
-                            </div>
-                          
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/porto_samsung.jpg" alt="SMART Project" class="w-full h-40 object-cover">
-                                <div class="p-4">
-                                  <h3 class="text-lg font-semibold mb-2">Smart Air Presence System</h3>
-                                  <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
-                                  <div class="space-x-1">
                                     <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded">Laravel</span>
                                     <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded">Flutter</span>
-                                  </div>
+                                </div>
                                 </div>
                             </div>
-
+                            
+                            <!-- CARD 2 -->
                             <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/porto_sicc.png" alt="Competition Center Project" class="w-full h-40 object-cover">
+                                <img src="img/projek/porto_samsung.jpg"
+                                    alt="SMART Project"
+                                    class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                                    onclick="openModal(this)"
+                                    data-desc="Smart Air Presence System adalah sistem pendeteksi kehadiran berdasarkan kualitas udara dan suhu lingkungan, digunakan di lingkungan indoor.">
                                 <div class="p-4">
-                                  <h3 class="text-lg font-semibold mb-2">Sistem Informasi Competition Center</h3>
-                                  <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
-                                  <div class="space-x-1">
+                                <h3 class="text-lg font-semibold mb-2">Smart Air Presence System</h3>
+                                <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
+                                <div class="space-x-1">
                                     <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded">Laravel</span>
                                     <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded">Flutter</span>
-                                  </div>
+                                </div>
                                 </div>
                             </div>
-
+                            
+                            <!-- CARD 3 -->
                             <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/porto_laundry.png" alt="Laundry Project" class="w-full h-40 object-cover">
+                                <img src="img/projek/porto_sicc.png"
+                                    alt="Competition Center Project"
+                                    class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                                    onclick="openModal(this)"
+                                    data-desc="SICC adalah sistem informasi terpusat untuk pendaftaran dan pelaporan lomba di lingkungan kampus. Mencakup notifikasi, tracking progress, dan pendataan pemenang.">
                                 <div class="p-4">
-                                  <h3 class="text-lg font-semibold mb-2">Sistem Informasi Laundry "Laverie"</h3>
-                                  <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
-                                  <div class="space-x-1">
+                                <h3 class="text-lg font-semibold mb-2">Sistem Informasi Competition Center</h3>
+                                <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
+                                <div class="space-x-1">
                                     <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded">Laravel</span>
                                     <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded">Flutter</span>
-                                  </div>
+                                </div>
+                                </div>
+                            </div>
+                            
+                            <!-- CARD 4 -->
+                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
+                                <img src="img/projek/porto_laundry.png"
+                                    alt="Laundry Project"
+                                    class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                                    onclick="openModal(this)"
+                                    data-desc="Laverie adalah aplikasi manajemen laundry berbasis Laravel yang menangani transaksi, penjadwalan, dan pelacakan laundry. Didesain untuk UMKM laundry.">
+                                <div class="p-4">
+                                <h3 class="text-lg font-semibold mb-2">Sistem Informasi Laundry "Laverie"</h3>
+                                <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
+                                <div class="space-x-1">
+                                    <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded">Laravel</span>
+                                    <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded">Flutter</span>
+                                </div>
                                 </div>
                             </div>
 
                         </div>
-                          
                     </div>
                 
                     <!-- SERTIFIKASI -->
                     <div class="tab-content-item hidden" id="sertifikasi">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="assets/dicoding-web.png" alt="Sertifikat Web" class="w-full h-40 object-cover">
+                                <img src="img/sertifikasi/BNSP_Junior Web Dev.jpg" alt="Sertifikat JWD BNSP" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
                                 <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">Dicoding: Belajar Dasar Pemrograman Web</h3>
+                                    <h3 class="text-lg font-semibold mb-2">BNSP: Junior Web Developer</h3>
                                     <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Juni 2024</p>
                                 </div>
                             </div>
-                          
+
                             <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="assets/google-cloud.png" alt="Sertifikat Cloud" class="w-full h-40 object-cover">
+                                <img src="img/sertifikasi/BNSP - Junior Cyber Security.png" alt="Sertifikat BNSP CyberSecurity" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
                                 <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">Google: Cloud Computing Fundamentals</h3>
+                                    <h3 class="text-lg font-semibold mb-2">BNSP: Junior Cyber Security</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
+                                </div>
+                            </div>
+
+                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
+                                <img src="img/sertifikasi/mtcna-1.png" alt="Sertifikat MTCNA" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold mb-2">MikroTik: MTCNA</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
+                                </div>
+                            </div>
+
+                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
+                                <img src="img/sertifikasi/TOEIC-1.png" alt="Sertifikat TOEIC" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold mb-2">ETS: TOEIC</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
+                                </div>
+                            </div>
+
+                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
+                                <img src="img/sertifikasi/BNSP_paspor-keterampilan-1.png" alt="Sertifikat KKNI TKJ" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold mb-2">KKNI Level 2 Teknik Komputer Jaringan</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
+                                </div>
+                            </div>
+
+                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
+                                <img src="img/sertifikasi/Skilvul-SkilBadge-IoT Development with ESP32-1.png" alt="Sertifikat IoT" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold mb-2">Skilvul: IoT Development with ESP32</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
+                                </div>
+                            </div>
+
+                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
+                                <img src="img/sertifikasi/Skilvul-SkilBadge-Python Lanjutan-1.png" alt="Sertifikat Python" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold mb-2">Skilvul: Python Lanjutan</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
+                                </div>
+                            </div>
+
+                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
+                                <img src="img/sertifikasi/Dicoding_Dasar Manajemen Proyek-1.png" alt="Sertifikat Manajemen Proyek" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold mb-2">Dicoding: Dasar Manajemen Proyek</h3>
                                     <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
                                 </div>
                             </div>
                         </div>
-                          
                     </div>
+
                 
                     <!-- TECHSTACK -->
                     <div class="tab-content-item hidden" id="techstack">
@@ -190,6 +274,10 @@
                             <div class="flex flex-col items-center gap-2">
                                 <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML" class="h-12 w-12">
                                 <span class="text-sm">HTML</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <img src="https://cdn.simpleicons.org/css3" alt="CSS" class="h-12 w-12">
+                                <span class="text-sm">CSS</span>
                             </div>
                             <div class="flex flex-col items-center gap-2">
                                 <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind" class="h-12 w-12">
@@ -204,8 +292,24 @@
                                 <span class="text-sm">Laravel</span>
                             </div>
                             <div class="flex flex-col items-center gap-2">
-                                <img src="https://cdn.simpleicons.org/flutter/02569B" alt="Flutter" class="h-12 w-12">
-                                <span class="text-sm">Flutter</span>
+                                <img src="https://cdn.simpleicons.org/linux/E72424" alt="Linux" class="h-12 w-12">
+                                <span class="text-sm">Linux</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <img src="https://cdn.simpleicons.org/python" alt="Python" class="h-12 w-12">
+                                <span class="text-sm">Python</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <img src="https://cdn.simpleicons.org/github/6D756E" alt="Github" class="h-12 w-12">
+                                <span class="text-sm">Github</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <img src="https://cdn.simpleicons.org/arduino" alt="Arduino" class="h-12 w-12">
+                                <span class="text-sm">Arduino</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <img src="https://cdn.simpleicons.org/mysql" alt="MySQL" class="h-12 w-12">
+                                <span class="text-sm">MySQL</span>
                             </div>
                         </div>  
                     </div>
@@ -213,59 +317,60 @@
                     <!-- AWARDEE -->
                     <div class="tab-content-item hidden" id="awardee">
                         <div class="grid md:grid-cols-2 gap-6">
+                            <!-- Awardee 1 -->
                             <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="assets/lomba-polinema.jpg" alt="Juara 1 Polinema" class="w-full h-40 object-cover">
+                                <img src="img/awardee/Sertifikat Semi Final - Samsung Innovation Campus Batch 5 (2023_2024)-1.png" alt="Semifinalis SIC Batch 5" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
                                 <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">Juara 1 Lomba Inovasi Teknologi</h3>
-                                    <p class="text-sm text-gray-600 dark:text-gray-300">Polinema, 2024</p>
+                                    <h3 class="text-lg font-semibold mb-2">Semifinalis Samsung Innovation Campus Batch 5</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Samsung Indonesia & Skilvul, 2024</p>
                                 </div>
                             </div>
-                          
+
+                            <!-- Awardee 2 -->
                             <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="assets/pkm-kc.jpg" alt="PKM-KC" class="w-full h-40 object-cover">
+                                <img src="img/awardee/Juara 3 - TIF Exhibition-1.png" alt="Juara 3 - TIF Exhibition" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
                                 <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">Finalis PKM-KC Nasional</h3>
-                                    <p class="text-sm text-gray-600 dark:text-gray-300">Kemendikbudristek, 2024</p>
+                                    <h3 class="text-lg font-semibold mb-2">Juara 3 Aplikasi Terbaik - TIF Exhibition</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Politeknik Negeri Jember, 2024</p>
                                 </div>
                             </div>
                         </div>
-                          
                     </div>
+
                 </div>
             </section>
             <!-- End Tabs UI -->
 
             <!-- Bagian Kontak -->
             <section class="my-12 bg-white p-8 rounded-xl shadow-md dark:bg-gray-800 dark:text-gray-100" data-aos="fade-up" data-aos-delay="100">
-                <h2 class="text-2xl font-semibold mb-4 text-center">Hubungi Saya</h2>
-
-                <div class="text-center space-y-4">
-                    <p class="text-gray-700 dark:text-white">Jika anda tertarik untuk bekerja sama atau ingin ngobrol santai, Hubungi saya melalui:</p>
-
-                    <div class="space-y-2">
-                        <p>
-                            Email:
-                            <a href="mailto:bima.iris758@gmail.com" class="text-blue-600 hover:underline">bima.iris758@gmail.com</a>
-                        </p>
-
-                        <p>
-                            Whatsapp:
-                            <a href="https://wa.me/6282264958427" class="text-blue-600 hover:underline" target="_blank">+62 822-6495-8427</a>
-                        </p>
-
-                        <p>
-                            Instagram:
-                            <a href="https://instagram.com/latansa_bima" class="text-blue-600 hover:underline" target="_blank">@latansa_bima</a>
-                        </p>
-
-                        <p>
-                            LinkedIn:
-                            <a href="https://www.linkedin.com/in/latansa-bima" class="text-blue-600 hover:underline" target="_blank">Latansa Bima Amanta</a>
-                        </p>
-                    </div>
+                <h2 class="text-2xl font-semibold mb-6 text-center">Hubungi Saya</h2>
+            
+                <div class="space-y-4 max-w-xl mx-auto text-center">
+                <p class="text-gray-700 dark:text-white">Jika Anda tertarik untuk bekerja sama atau ingin ngobrol santai, hubungi saya melalui:</p>
+            
+                <div class="flex items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 px-4 py-3 rounded-lg">
+                    <i data-lucide="mail" class="w-5 h-5 text-blue-600"></i>
+                    <a href="mailto:bima.iris758@gmail.com" class="text-blue-600 hover:underline">bima.iris758@gmail.com</a>
+                </div>
+            
+                <div class="flex items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 px-4 py-3 rounded-lg">
+                    <i data-lucide="phone" class="w-5 h-5 text-green-500"></i>
+                    <a href="https://wa.me/6282264958427" class="text-blue-600 hover:underline" target="_blank">+62 822-6495-8427</a>
+                </div>
+            
+                <div class="flex items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 px-4 py-3 rounded-lg">
+                    <i data-lucide="instagram" class="w-5 h-5 text-pink-500"></i>
+                    <a href="https://instagram.com/latansa_bima" class="text-blue-600 hover:underline" target="_blank">@latansa_bima</a>
+                </div>
+            
+                <div class="flex items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 px-4 py-3 rounded-lg">
+                    <i data-lucide="linkedin" class="w-5 h-5 text-sky-600"></i>
+                    <a href="https://www.linkedin.com/in/latansa-bima" class="text-blue-600 hover:underline" target="_blank">Latansa Bima Amanta</a>
+                </div>
                 </div>
             </section>
             <!-- End Bagian Kontak -->
+  
 
             <!-- Button Dark Mode -->
             <button id="darkMode" class="fixed bottom-5 left-5 bg-gray-800 text-white px-4 py-2 rounded-full dark:bg-gray-200 dark:text-gray-800 z-50">
@@ -293,6 +398,12 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
+        </script>
+
+        <!-- Lucide Icon CDN -->
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script>
+            lucide.createIcons();
         </script>
 
     </body>

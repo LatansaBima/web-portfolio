@@ -1,0 +1,58 @@
+<!-- Modal viewer -->
+                            <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-80">
+                                <span onclick="closeModal()" class="absolute top-4 right-4 text-white text-3xl cursor-pointer">&times;</span>
+                                <img id="modalImage" src="" class="max-w-full max-h-[90%] rounded-lg shadow-xl">
+                            </div>
+                            <!-- CARD -->
+                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800">
+                                <div class="overflow-hidden">
+                                    <img src="img/projek/porto_internify.png"
+                                         alt="Internify Project"
+                                         class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                                         onclick="openModal(this)">
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold mb-2">Sistem Informasi Magang "Internify"</h3>
+                                    <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
+                                    <div class="space-x-1">
+                                    <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded">Laravel</span>
+                                    <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded">Flutter</span>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
+                                <img src="img/projek/porto_samsung.jpg" alt="SMART Project" class="w-full h-40 object-cover">
+                                <div class="p-4">
+                                  <h3 class="text-lg font-semibold mb-2">Smart Air Presence System</h3>
+                                  <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
+                                  <div class="space-x-1">
+                                    <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded">Laravel</span>
+                                    <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded">Flutter</span>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
+                                <img src="img/projek/porto_sicc.png" alt="Competition Center Project" class="w-full h-40 object-cover">
+                                <div class="p-4">
+                                  <h3 class="text-lg font-semibold mb-2">Sistem Informasi Competition Center</h3>
+                                  <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
+                                  <div class="space-x-1">
+                                    <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded">Laravel</span>
+                                    <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded">Flutter</span>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
+                                <img src="img/projek/porto_laundry.png" alt="Laundry Project" class="w-full h-40 object-cover">
+                                <div class="p-4">
+                                  <h3 class="text-lg font-semibold mb-2">Sistem Informasi Laundry "Laverie"</h3>
+                                  <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
+                                  <div class="space-x-1">
+                                    <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded">Laravel</span>
+                                    <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded">Flutter</span>
+                                  </div>
+                                </div>
+                            </div>

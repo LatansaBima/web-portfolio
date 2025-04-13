@@ -88,3 +88,28 @@ tabButtons.forEach(button => {
     document.getElementById(target).classList.remove('hidden');
   });
 });
+
+
+// Modal Image
+function openModal(img) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const modalDesc = document.getElementById('modalDesc');
+
+    modalImg.src = img.src;
+    modalDesc.textContent = img.getAttribute('data-desc') || 'Tidak ada deskripsi.';
+    
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+  }
+
+  // ESC to close modal
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+});
