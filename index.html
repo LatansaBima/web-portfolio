@@ -1,412 +1,926 @@
 <!DOCTYPE html>
 <html lang="id">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio Latansa Bima Amanta</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Latansa Bima Amanta</title>
 
-        <!-- Link to style.css -->
-         <link rel="stylesheet" href="css/style.css" />
-        <!-- Tailwind CDN -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                darkMode: 'class', // agar dark mode bisa memakai class "dark"
-            };
-        </script>
-        <!-- AOS CSS -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    </head>
-    <body class="bg-gray-200 text-gray-900 font-sans dark:bg-gray-900 dark:text-gray-100">
-        <header class="bg-gray-100 flex flex-col items-center py-5 dark:bg-gray-800 dark:text-white">
-            <img src="img/foto_profile.jpeg" alt="Foto Saya" class="w-48 h-48 rounded-full shadow-lg object-cover" />
-            <!-- <h1 class="text-3xl font-bold mt-4">Halo, Saya Latansa Bima Amanta</h1> -->
-            <!-- Typing Effect --> 
-            <h1 id="typing-text" class="text-3xl font-bold mt-4 h-10"></h1>
-            <p class="text-md mt-2 text-gray-600 dark:text-white" data-aos="fade-down" data-aos-delay="1000">Web Developer | AIoT & Cyber Security Enthusiast</p>
-        </header>
-        <main class="max-w-3xl mx-auto px-4">
-            <!-- About -->
-            <section class="my-6 dark:text-gray-300" data-aos="fade-down" data-aos-delay="1500">
-                <h2 class="text-2xl font-semibold mb-5 text-center">Tentang Saya</h2>
-                <p class="text-justify">
-                    Saya adalah mahasiswa Teknik Informatika semester enam dengan minat besar dalam pengembangan web,
-                    serta ketertarikan pada bidang AIoT dan keamanan siber. Saya memiliki semangat tinggi dalam belajar dan
-                    beradaptasi dengan teknologi baru, serta terbiasa bekerja secara individu maupun tim dengan mengedepankan
-                    komunikasi efektif dan pemecahan masalah.
+    <!-- Link to style.css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class", // agar dark mode bisa memakai class "dark"
+      };
+    </script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-gray-200 text-gray-900 font-sans dark:bg-gray-900 dark:text-gray-100"
+  >
+    <header
+      class="relative overflow-hidden gradient-bg min-h-screen flex flex-col items-center justify-center py-20"
+    >
+      <!-- Background Elements -->
+      <div class="absolute inset-0 opacity-20">
+        <div
+          class="absolute top-20 left-10 w-20 h-20 bg-white rounded-full animate-float"
+        ></div>
+        <div
+          class="absolute top-40 right-20 w-16 h-16 bg-white rounded-full animate-float"
+          style="animation-delay: 1s"
+        ></div>
+        <div
+          class="absolute bottom-32 left-1/4 w-12 h-12 bg-white rounded-full animate-float"
+          style="animation-delay: 2s"
+        ></div>
+        <div
+          class="absolute bottom-20 right-1/3 w-8 h-8 bg-white rounded-full animate-float"
+          style="animation-delay: 0.5s"
+        ></div>
+      </div>
+
+      <!-- Profile Section -->
+      <div
+        class="relative z-10 flex flex-col items-center text-center text-white"
+      >
+        <!-- Profile Image Container -->
+        <div class="relative mb-8" data-aos="zoom-in" data-aos-duration="1000">
+          <div
+            class="absolute inset-0 rounded-full profile-glow animate-pulse"
+          ></div>
+          <img
+            src="img/foto_profile.jpeg"
+            alt="Foto Saya"
+            class="relative w-32 h-32 md:w-48 md:h-48 rounded-full object-cover border-4 border-white/30 animate-float profile-image"
+          />
+          <div
+            class="absolute -inset-2 rounded-full border-2 border-white/20 animate-ping-slow"
+          ></div>
+        </div>
+
+        <!-- Name with Typing Effect -->
+        <div class="mb-6" data-aos="fade-up" data-aos-delay="500">
+          <h1
+            id="typing-text"
+            class="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 typing-cursor min-h-[2rem] md:min-h-[3rem] bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent typing-text-mobile text-shadow"
+          ></h1>
+        </div>
+
+        <!-- Role Description -->
+        <div
+          class="glass-effect rounded-2xl px-8 py-4 mb-8 neon-glow"
+          data-aos="fade-up"
+          data-aos-delay="1000"
+        >
+          <p class="text-lg md:text-xl font-medium text-white/90">
+            Web Developer | AIoT & Cyber Security Enthusiast
+          </p>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div
+          class="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          data-aos="fade-up"
+          data-aos-delay="1500"
+        >
+          <div
+            class="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center"
+          >
+            <div
+              class="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce"
+            ></div>
+          </div>
+          <p class="text-sm text-white/60 mt-2">Scroll untuk melihat lebih</p>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-5xl mx-auto px-4 -mt-20 relative z-20">
+      <!-- About Section -->
+      <section class="mb-20" data-aos="fade-up" data-aos-delay="200">
+        <div
+          class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden card-hover"
+        >
+          <!-- Section Header -->
+          <div
+            class="relative bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-6"
+          >
+            <div class="absolute inset-0 bg-black/10"></div>
+            <h2 class="relative text-3xl font-bold text-white text-center">
+              <span class="inline-block">✨</span> Tentang Saya
+              <span class="inline-block">✨</span>
+            </h2>
+          </div>
+
+          <!-- Content -->
+          <div class="p-8 md:p-12">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+              <!-- Text Content -->
+              <div class="space-y-6">
+                <div class="relative">
+                  <div
+                    class="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-600 rounded-full"
+                  ></div>
+                  <p
+                    class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify pl-6"
+                  >
+                    Saya adalah mahasiswa
+                    <span class="font-semibold text-blue-600 dark:text-blue-400"
+                      >Teknik Informatika semester enam</span
+                    >
+                    dengan minat besar dalam pengembangan web, serta
+                    ketertarikan pada bidang
+                    <span
+                      class="font-semibold text-purple-600 dark:text-purple-400"
+                      >AIoT dan keamanan siber</span
+                    >. Saya memiliki semangat tinggi dalam belajar dan
+                    beradaptasi dengan teknologi baru, serta terbiasa bekerja
+                    secara individu maupun tim dengan mengedepankan komunikasi
+                    efektif dan pemecahan masalah.
+                  </p>
+                </div>
+
+                <div class="relative">
+                  <div
+                    class="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-purple-500 to-pink-600 rounded-full"
+                  ></div>
+                  <p
+                    class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify pl-6"
+                  >
+                    Dalam perjalanan akademik, saya aktif mengikuti pelatihan,
+                    proyek pengembangan, dan kompetisi. Saya telah mengikuti
+                    berbagai macam
+                    <span
+                      class="font-semibold text-green-600 dark:text-green-400"
+                      >pelatihan bersertifikasi</span
+                    >
+                    untuk mengembangkan keterampilan teknis. Selain itu, saya
+                    juga berpartisipasi dalam kompetisi di bidang software
+                    development dan cyber security, yang memperluas wawasan saya
+                    terhadap tantangan dunia nyata.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Skills Highlights -->
+              <div class="space-y-4">
+                <h3
+                  class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-6"
+                >
+                  Keahlian Utama
+                </h3>
+
+                <div class="space-y-4">
+                  <div
+                    class="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-xl"
+                  >
+                    <div
+                      class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center"
+                    >
+                      <span class="text-white text-sm">🌐</span>
+                    </div>
+                    <span class="font-medium text-blue-800 dark:text-blue-200"
+                      >Web Development</span
+                    >
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-3 p-4 bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-xl"
+                  >
+                    <div
+                      class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center"
+                    >
+                      <span class="text-white text-sm">🤖</span>
+                    </div>
+                    <span
+                      class="font-medium text-purple-800 dark:text-purple-200"
+                      >AIoT Development</span
+                    >
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-3 p-4 bg-gradient-to-r from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 rounded-xl"
+                  >
+                    <div
+                      class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center"
+                    >
+                      <span class="text-white text-sm">🔒</span>
+                    </div>
+                    <span class="font-medium text-red-800 dark:text-red-200"
+                      >Cyber Security</span
+                    >
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-3 p-4 bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-xl"
+                  >
+                    <div
+                      class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center"
+                    >
+                      <span class="text-white text-sm">👥</span>
+                    </div>
+                    <span class="font-medium text-green-800 dark:text-green-200"
+                      >Team Collaboration</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About -->
+
+      <!-- Timeline Karir -->
+      <section
+        id="timeline"
+        class="my-20"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h2 class="text-2xl font-semibold mb-12 text-center">
+          Perjalanan Karier
+        </h2>
+
+        <div class="relative max-w-4xl mx-auto">
+          <!-- Garis Tengah -->
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-600 z-0"
+          ></div>
+
+          <!-- Container Items -->
+          <div id="timeline-items" class="flex flex-col gap-3 relative z-10">
+            <!-- Item 1 -->
+            <div class="flex justify-start relative">
+              <div class="w-1/2 pr-8 text-right">
+                <div
+                  class="bg-white shadow-md p-5 rounded-xl dark:bg-gray-800"
+                  data-aos="fade-right"
+                >
+                  <h3 class="text-lg font-bold">
+                    2025 - Junior DevOps Engineer
+                  </h3>
+                  <p
+                    class="text-sm font-medium text-gray-600 dark:text-gray-200"
+                  >
+                    Maret - April
+                  </p>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Mengelola server SMKN 4 Jember dengan Proxmox VE dan
+                    melakukan konfigurasi web service dengan docker.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="flex justify-end relative">
+              <div class="w-1/2 pl-8 text-left">
+                <div
+                  class="bg-white shadow-md p-5 rounded-xl dark:bg-gray-800"
+                  data-aos="fade-left"
+                >
+                  <h3 class="text-lg font-bold">2024 - Data Analyst</h3>
+                  <p
+                    class="text-sm font-medium text-gray-600 dark:text-gray-200"
+                  >
+                    September - December
+                  </p>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Program MBKM kolaborasi Datains dan BRIN yang mengembangkan
+                    platform Smart Tourism berbasis Artificial Intelligence
+                    untuk destinasi pariwisata super prioritas.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="flex justify-start relative">
+              <div class="w-1/2 pr-8 text-right">
+                <div
+                  class="bg-white shadow-md p-5 rounded-xl dark:bg-gray-800"
+                  data-aos="fade-right"
+                >
+                  <h3 class="text-lg font-bold">2021 - IT Support</h3>
+                  <p
+                    class="text-sm font-medium text-gray-600 dark:text-gray-200"
+                  >
+                    Januari - April
+                  </p>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Kegiatan magang SMK di Taman Nasional Bali Barat. Melakukan
+                    instalasi, konfigurasi, serta troubleshoot masalah pada
+                    komputer dan aplikasi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- End Timeline Karir -->
+
+      <!-- Tabs UI -->
+      <section
+        class="my-12"
+        id="tabs-section"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <h2 class="text-2xl font-semibold mb-6 text-center">Highlight</h2>
+
+        <!-- Tabs -->
+        <div class="flex justify-center mb-6 flex-wrap gap-2">
+          <button
+            class="tab-btn px-4 py-2 rounded-lg font-medium bg-gray-300 text-black dark:bg-gray-700 dark:text-white"
+            data-tab="portfolio"
+          >
+            Projek
+          </button>
+          <button
+            class="tab-btn px-4 py-2 rounded-lg font-medium bg-gray-200 text-black dark:bg-gray-600 dark:text-white"
+            data-tab="sertifikasi"
+          >
+            Sertifikasi
+          </button>
+          <button
+            class="tab-btn px-4 py-2 rounded-lg font-medium bg-gray-200 text-black dark:bg-gray-600 dark:text-white"
+            data-tab="techstack"
+          >
+            Techstack
+          </button>
+          <button
+            class="tab-btn px-4 py-2 rounded-lg font-medium bg-gray-200 text-black dark:bg-gray-600 dark:text-white"
+            data-tab="awardee"
+          >
+            Awardee
+          </button>
+        </div>
+
+        <!-- Tabs Content -->
+        <div id="tab-content" class="space-y-6">
+          <!-- Modal viewer -->
+          <div
+            id="imageModal"
+            class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-80 px-4"
+          >
+            <div
+              class="relative bg-white dark:bg-gray-900 rounded-xl max-w-3xl w-full p-4 shadow-xl space-y-4"
+            >
+              <!-- Close button -->
+              <span
+                onclick="closeModal()"
+                class="absolute top-2 right-3 text-2xl text-gray-800 dark:text-white cursor-pointer"
+                >&times;</span
+              >
+
+              <!-- Image -->
+              <img
+                id="modalImage"
+                src=""
+                alt=""
+                class="w-full h-auto rounded-lg"
+              />
+
+              <!-- Description -->
+              <div class="max-h-60 overflow-y-auto border-t pt-2">
+                <p
+                  id="modalDesc"
+                  class="text-gray-700 dark:text-gray-200 text-sm leading-relaxed"
+                >
+                  <!-- dynamic content here -->
                 </p>
-                <br>
-                <p class="text-justify">
-                    Dalam perjalanan akademik, saya aktif mengikuti pelatihan, proyek pengembangan, dan kompetisi.
-                    Saya telah mengikuti berbagai macam pelatihan bersertifikasi untuk mengembangkan keterampilan teknis.
-                    Selain itu, saya juga berpartisipasi dalam kompetisi di bidang software development
-                    dan cyber security, yang memperluas wawasan saya terhadap tantangan dunia nyata, serta mengasah kemampuan
-                    problem solving dan kerja sama tim.
-                </p>
-            </section>
-            <!-- End About -->
-
-            <!-- Timeline Karir -->
-            <section id="timeline" class="my-20" data-aos="fade-up" data-aos-delay="200">
-                <h2 class="text-2xl font-semibold mb-12 text-center">Perjalanan Karier</h2>
-              
-                <div class="relative max-w-4xl mx-auto">
-                    <!-- Garis Tengah -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-600 z-0"></div>
-                
-                    <!-- Container Items -->
-                    <div id="timeline-items" class="flex flex-col gap-3 relative z-10">
-                        <!-- Item 1 -->
-                        <div class="flex justify-start relative">
-                        <div class="w-1/2 pr-8 text-right">
-                            <div class="bg-white shadow-md p-5 rounded-xl dark:bg-gray-800" data-aos="fade-right">
-                            <h3 class="text-lg font-bold">2025 - Junior DevOps Engineer</h3>
-                            <p class="text-sm font-medium text-gray-600 dark:text-gray-200">Maret - April</p>
-                            <p class="text-sm text-gray-600 dark:text-gray-300">Mengelola server SMKN 4 Jember dengan Proxmox VE dan melakukan konfigurasi web service dengan docker.</p>
-                            </div>
-                        </div>
-                        </div>
-                
-                        <!-- Item 2 -->
-                        <div class="flex justify-end relative">
-                        <div class="w-1/2 pl-8 text-left">
-                            <div class="bg-white shadow-md p-5 rounded-xl dark:bg-gray-800" data-aos="fade-left">
-                            <h3 class="text-lg font-bold">2024 - Data Analyst</h3>
-                            <p class="text-sm font-medium text-gray-600 dark:text-gray-200">September - December</p>
-                            <p class="text-sm text-gray-600 dark:text-gray-300">Program MBKM kolaborasi Datains dan BRIN yang mengembangkan platform Smart Tourism berbasis Artificial Intelligence untuk destinasi pariwisata super prioritas.</p>
-                            </div>
-                        </div>
-                        </div>
-                        
-                        <!-- Item 3 -->
-                        <div class="flex justify-start relative">
-                            <div class="w-1/2 pr-8 text-right">
-                            <div class="bg-white shadow-md p-5 rounded-xl dark:bg-gray-800" data-aos="fade-right">
-                                <h3 class="text-lg font-bold">2021 - IT Support</h3>
-                                <p class="text-sm font-medium text-gray-600 dark:text-gray-200">Januari - April</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-300">Kegiatan magang SMK di Taman Nasional Bali Barat. Melakukan instalasi, konfigurasi, serta troubleshoot masalah pada komputer dan aplikasi</p>
-                            </div>
-                            </div>
-                        </div>
-
-                    </div>
+              </div>
+            </div>
+          </div>
+          <!-- PORTOFOLIO -->
+          <div class="tab-content-item" id="portfolio">
+            <div class="grid md:grid-cols-2 gap-6">
+              <!-- CARD 1 -->
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/projek/porto_internify.png"
+                  alt="Internify Project"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                  data-desc="Internify adalah platform informasi magang berbasis web dan mobile. Fitur-fiturnya termasuk chatbot, pengajuan proposal, pencarian tempat magang, dan AI pendukung keputusan."
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">
+                    Sistem Informasi Magang "Internify"
+                  </h3>
+                  <p class="text-sm mb-2">
+                    Platform informasi magang berbasis web dan mobile dengan
+                    fitur chatbot dan AI.
+                  </p>
+                  <div class="space-x-1">
+                    <span
+                      class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded"
+                      >Laravel</span
+                    >
+                    <span
+                      class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded"
+                      >Flutter</span
+                    >
+                  </div>
                 </div>
-            </section>
-                                          
-            <!-- End Timeline Karir -->
+              </div>
 
-            <!-- Tabs UI -->
-            <section class="my-12" id="tabs-section" data-aos="fade-up" data-aos-delay="100">
-                <h2 class="text-2xl font-semibold mb-6 text-center">Highlight</h2>
-              
-                <!-- Tabs -->
-                <div class="flex justify-center mb-6 flex-wrap gap-2">
-                    <button class="tab-btn px-4 py-2 rounded-lg font-medium bg-gray-300 text-black dark:bg-gray-700 dark:text-white" data-tab="portfolio">Projek</button>
-                    <button class="tab-btn px-4 py-2 rounded-lg font-medium bg-gray-200 text-black dark:bg-gray-600 dark:text-white" data-tab="sertifikasi">Sertifikasi</button>
-                    <button class="tab-btn px-4 py-2 rounded-lg font-medium bg-gray-200 text-black dark:bg-gray-600 dark:text-white" data-tab="techstack">Techstack</button>
-                    <button class="tab-btn px-4 py-2 rounded-lg font-medium bg-gray-200 text-black dark:bg-gray-600 dark:text-white" data-tab="awardee">Awardee</button>
+              <!-- CARD 2 -->
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/projek/porto_samsung.jpg"
+                  alt="SMART Project"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                  data-desc="Smart Air Presence System adalah sistem pendeteksi kehadiran berdasarkan kualitas udara dan suhu lingkungan, digunakan di lingkungan indoor."
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">
+                    Smart Air Presence System
+                  </h3>
+                  <p class="text-sm mb-2">
+                    Platform informasi magang berbasis web dan mobile dengan
+                    fitur chatbot dan AI.
+                  </p>
+                  <div class="space-x-1">
+                    <span
+                      class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded"
+                      >Laravel</span
+                    >
+                    <span
+                      class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded"
+                      >Flutter</span
+                    >
+                  </div>
                 </div>
-              
-                <!-- Tabs Content -->
-                <div id="tab-content" class="space-y-6">
-                    <!-- Modal viewer -->
-                    <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-80 px-4">
-                        <div class="relative bg-white dark:bg-gray-900 rounded-xl max-w-3xl w-full p-4 shadow-xl space-y-4">
-                        <!-- Close button -->
-                        <span onclick="closeModal()" class="absolute top-2 right-3 text-2xl text-gray-800 dark:text-white cursor-pointer">&times;</span>
-                        
-                        <!-- Image -->
-                        <img id="modalImage" src="" alt="" class="w-full h-auto rounded-lg">
-                    
-                        <!-- Description -->
-                        <div class="max-h-60 overflow-y-auto border-t pt-2">
-                            <p id="modalDesc" class="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
-                            <!-- dynamic content here -->
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <!-- PORTOFOLIO -->
-                    <div class="tab-content-item" id="portfolio">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <!-- CARD 1 -->
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/projek/porto_internify.png"
-                                    alt="Internify Project"
-                                    class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
-                                    onclick="openModal(this)"
-                                    data-desc="Internify adalah platform informasi magang berbasis web dan mobile. Fitur-fiturnya termasuk chatbot, pengajuan proposal, pencarian tempat magang, dan AI pendukung keputusan.">
-                                <div class="p-4">
-                                <h3 class="text-lg font-semibold mb-2">Sistem Informasi Magang "Internify"</h3>
-                                <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
-                                <div class="space-x-1">
-                                    <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded">Laravel</span>
-                                    <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded">Flutter</span>
-                                </div>
-                                </div>
-                            </div>
-                            
-                            <!-- CARD 2 -->
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/projek/porto_samsung.jpg"
-                                    alt="SMART Project"
-                                    class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
-                                    onclick="openModal(this)"
-                                    data-desc="Smart Air Presence System adalah sistem pendeteksi kehadiran berdasarkan kualitas udara dan suhu lingkungan, digunakan di lingkungan indoor.">
-                                <div class="p-4">
-                                <h3 class="text-lg font-semibold mb-2">Smart Air Presence System</h3>
-                                <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
-                                <div class="space-x-1">
-                                    <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded">Laravel</span>
-                                    <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded">Flutter</span>
-                                </div>
-                                </div>
-                            </div>
-                            
-                            <!-- CARD 3 -->
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/projek/porto_sicc.png"
-                                    alt="Competition Center Project"
-                                    class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
-                                    onclick="openModal(this)"
-                                    data-desc="SICC adalah sistem informasi terpusat untuk pendaftaran dan pelaporan lomba di lingkungan kampus. Mencakup notifikasi, tracking progress, dan pendataan pemenang.">
-                                <div class="p-4">
-                                <h3 class="text-lg font-semibold mb-2">Sistem Informasi Competition Center</h3>
-                                <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
-                                <div class="space-x-1">
-                                    <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded">Laravel</span>
-                                    <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded">Flutter</span>
-                                </div>
-                                </div>
-                            </div>
-                            
-                            <!-- CARD 4 -->
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/projek/porto_laundry.png"
-                                    alt="Laundry Project"
-                                    class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
-                                    onclick="openModal(this)"
-                                    data-desc="Laverie adalah aplikasi manajemen laundry berbasis Laravel yang menangani transaksi, penjadwalan, dan pelacakan laundry. Didesain untuk UMKM laundry.">
-                                <div class="p-4">
-                                <h3 class="text-lg font-semibold mb-2">Sistem Informasi Laundry "Laverie"</h3>
-                                <p class="text-sm mb-2">Platform informasi magang berbasis web dan mobile dengan fitur chatbot dan AI.</p>
-                                <div class="space-x-1">
-                                    <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded">Laravel</span>
-                                    <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded">Flutter</span>
-                                </div>
-                                </div>
-                            </div>
+              </div>
 
-                        </div>
-                    </div>
-                
-                    <!-- SERTIFIKASI -->
-                    <div class="tab-content-item hidden" id="sertifikasi">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/sertifikasi/BNSP_Junior Web Dev.jpg" alt="Sertifikat JWD BNSP" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
-                                <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">BNSP: Junior Web Developer</h3>
-                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Juni 2024</p>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/sertifikasi/BNSP - Junior Cyber Security.png" alt="Sertifikat BNSP CyberSecurity" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
-                                <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">BNSP: Junior Cyber Security</h3>
-                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/sertifikasi/mtcna-1.png" alt="Sertifikat MTCNA" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
-                                <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">MikroTik: MTCNA</h3>
-                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/sertifikasi/TOEIC-1.png" alt="Sertifikat TOEIC" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
-                                <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">ETS: TOEIC</h3>
-                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/sertifikasi/BNSP_paspor-keterampilan-1.png" alt="Sertifikat KKNI TKJ" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
-                                <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">KKNI Level 2 Teknik Komputer Jaringan</h3>
-                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/sertifikasi/Skilvul-SkilBadge-IoT Development with ESP32-1.png" alt="Sertifikat IoT" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
-                                <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">Skilvul: IoT Development with ESP32</h3>
-                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/sertifikasi/Skilvul-SkilBadge-Python Lanjutan-1.png" alt="Sertifikat Python" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
-                                <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">Skilvul: Python Lanjutan</h3>
-                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/sertifikasi/Dicoding_Dasar Manajemen Proyek-1.png" alt="Sertifikat Manajemen Proyek" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
-                                <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">Dicoding: Dasar Manajemen Proyek</h3>
-                                    <p class="text-sm text-gray-600 dark:text-gray-300">Diterbitkan: Maret 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                
-                    <!-- TECHSTACK -->
-                    <div class="tab-content-item hidden" id="techstack">
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 justify-center">
-                            <div class="flex flex-col items-center gap-2">
-                                <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML" class="h-12 w-12">
-                                <span class="text-sm">HTML</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-2">
-                                <img src="https://cdn.simpleicons.org/css3" alt="CSS" class="h-12 w-12">
-                                <span class="text-sm">CSS</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-2">
-                                <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind" class="h-12 w-12">
-                                <span class="text-sm">Tailwind</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-2">
-                                <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" class="h-12 w-12">
-                                <span class="text-sm">JS</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-2">
-                                <img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="Laravel" class="h-12 w-12">
-                                <span class="text-sm">Laravel</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-2">
-                                <img src="https://cdn.simpleicons.org/linux/E72424" alt="Linux" class="h-12 w-12">
-                                <span class="text-sm">Linux</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-2">
-                                <img src="https://cdn.simpleicons.org/python" alt="Python" class="h-12 w-12">
-                                <span class="text-sm">Python</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-2">
-                                <img src="https://cdn.simpleicons.org/github/6D756E" alt="Github" class="h-12 w-12">
-                                <span class="text-sm">Github</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-2">
-                                <img src="https://cdn.simpleicons.org/arduino" alt="Arduino" class="h-12 w-12">
-                                <span class="text-sm">Arduino</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-2">
-                                <img src="https://cdn.simpleicons.org/mysql" alt="MySQL" class="h-12 w-12">
-                                <span class="text-sm">MySQL</span>
-                            </div>
-                        </div>  
-                    </div>
-                
-                    <!-- AWARDEE -->
-                    <div class="tab-content-item hidden" id="awardee">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <!-- Awardee 1 -->
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/awardee/Sertifikat Semi Final - Samsung Innovation Campus Batch 5 (2023_2024)-1.png" alt="Semifinalis SIC Batch 5" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
-                                <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">Semifinalis Samsung Innovation Campus Batch 5</h3>
-                                    <p class="text-sm text-gray-600 dark:text-gray-300">Samsung Indonesia & Skilvul, 2024</p>
-                                </div>
-                            </div>
-
-                            <!-- Awardee 2 -->
-                            <div class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden">
-                                <img src="img/awardee/Juara 3 - TIF Exhibition-1.png" alt="Juara 3 - TIF Exhibition" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal(this)">
-                                <div class="p-4">
-                                    <h3 class="text-lg font-semibold mb-2">Juara 3 Aplikasi Terbaik - TIF Exhibition</h3>
-                                    <p class="text-sm text-gray-600 dark:text-gray-300">Politeknik Negeri Jember, 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+              <!-- CARD 3 -->
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/projek/porto_sicc.png"
+                  alt="Competition Center Project"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                  data-desc="SICC adalah sistem informasi terpusat untuk pendaftaran dan pelaporan lomba di lingkungan kampus. Mencakup notifikasi, tracking progress, dan pendataan pemenang."
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">
+                    Sistem Informasi Competition Center
+                  </h3>
+                  <p class="text-sm mb-2">
+                    Platform informasi magang berbasis web dan mobile dengan
+                    fitur chatbot dan AI.
+                  </p>
+                  <div class="space-x-1">
+                    <span
+                      class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded"
+                      >Laravel</span
+                    >
+                    <span
+                      class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded"
+                      >Flutter</span
+                    >
+                  </div>
                 </div>
-            </section>
-            <!-- End Tabs UI -->
+              </div>
 
-            <!-- Bagian Kontak -->
-            <section class="my-12 bg-white p-8 rounded-xl shadow-md dark:bg-gray-800 dark:text-gray-100" data-aos="fade-up" data-aos-delay="100">
-                <h2 class="text-2xl font-semibold mb-6 text-center">Hubungi Saya</h2>
-            
-                <div class="space-y-4 max-w-xl mx-auto text-center">
-                <p class="text-gray-700 dark:text-white">Jika Anda tertarik untuk bekerja sama atau ingin ngobrol santai, hubungi saya melalui:</p>
-            
-                <div class="flex items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 px-4 py-3 rounded-lg">
-                    <i data-lucide="mail" class="w-5 h-5 text-blue-600"></i>
-                    <a href="mailto:bima.iris758@gmail.com" class="text-blue-600 hover:underline">bima.iris758@gmail.com</a>
+              <!-- CARD 4 -->
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/projek/porto_laundry.png"
+                  alt="Laundry Project"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                  data-desc="Laverie adalah aplikasi manajemen laundry berbasis Laravel yang menangani transaksi, penjadwalan, dan pelacakan laundry. Didesain untuk UMKM laundry."
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">
+                    Sistem Informasi Laundry "Laverie"
+                  </h3>
+                  <p class="text-sm mb-2">
+                    Platform informasi magang berbasis web dan mobile dengan
+                    fitur chatbot dan AI.
+                  </p>
+                  <div class="space-x-1">
+                    <span
+                      class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs px-2 py-1 rounded"
+                      >Laravel</span
+                    >
+                    <span
+                      class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs px-2 py-1 rounded"
+                      >Flutter</span
+                    >
+                  </div>
                 </div>
-            
-                <div class="flex items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 px-4 py-3 rounded-lg">
-                    <i data-lucide="phone" class="w-5 h-5 text-green-500"></i>
-                    <a href="https://wa.me/6282264958427" class="text-blue-600 hover:underline" target="_blank">+62 822-6495-8427</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SERTIFIKASI -->
+          <div class="tab-content-item hidden" id="sertifikasi">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/sertifikasi/BNSP_Junior Web Dev.jpg"
+                  alt="Sertifikat JWD BNSP"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">
+                    BNSP: Junior Web Developer
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Diterbitkan: Juni 2024
+                  </p>
                 </div>
-            
-                <div class="flex items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 px-4 py-3 rounded-lg">
-                    <i data-lucide="instagram" class="w-5 h-5 text-pink-500"></i>
-                    <a href="https://instagram.com/latansa_bima" class="text-blue-600 hover:underline" target="_blank">@latansa_bima</a>
+              </div>
+
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/sertifikasi/BNSP - Junior Cyber Security.png"
+                  alt="Sertifikat BNSP CyberSecurity"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">
+                    BNSP: Junior Cyber Security
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Diterbitkan: Maret 2024
+                  </p>
                 </div>
-            
-                <div class="flex items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 px-4 py-3 rounded-lg">
-                    <i data-lucide="linkedin" class="w-5 h-5 text-sky-600"></i>
-                    <a href="https://www.linkedin.com/in/latansa-bima" class="text-blue-600 hover:underline" target="_blank">Latansa Bima Amanta</a>
+              </div>
+
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/sertifikasi/mtcna-1.png"
+                  alt="Sertifikat MTCNA"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">MikroTik: MTCNA</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Diterbitkan: Maret 2024
+                  </p>
                 </div>
+              </div>
+
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/sertifikasi/TOEIC-1.png"
+                  alt="Sertifikat TOEIC"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">ETS: TOEIC</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Diterbitkan: Maret 2024
+                  </p>
                 </div>
-            </section>
-            <!-- End Bagian Kontak -->
-  
+              </div>
 
-            <!-- Button Dark Mode -->
-            <button id="darkMode" class="fixed bottom-5 left-5 bg-gray-800 text-white px-4 py-2 rounded-full dark:bg-gray-200 dark:text-gray-800 z-50">
-                Toggle 🌙 | ☀️
-            </button>
-            <!-- End Button Dark -->
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/sertifikasi/BNSP_paspor-keterampilan-1.png"
+                  alt="Sertifikat KKNI TKJ"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">
+                    KKNI Level 2 Teknik Komputer Jaringan
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Diterbitkan: Maret 2024
+                  </p>
+                </div>
+              </div>
 
-            <!-- Button Scroll to Top -->
-            <button id="scrollTopBtn" class="fixed bottom-5 right-5 hidden bg-gray-800 text-white px-4 py-2 rounded-full dark:bg-gray-200 dark:text-gray-800">
-                Scroll ⬆
-            </button>
-            <!-- End Button Scroll -->
-        </main>
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/sertifikasi/Skilvul-SkilBadge-IoT Development with ESP32-1.png"
+                  alt="Sertifikat IoT"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">
+                    Skilvul: IoT Development with ESP32
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Diterbitkan: Maret 2024
+                  </p>
+                </div>
+              </div>
 
-        <!-- Footer -->
-        <footer class="text-center text-sm py-6 text-gray-500 dark:text-gray-400">
-            &copy; 2025 Latansa Bima Amanta
-        </footer>
-        <!-- End Footer -->
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/sertifikasi/Skilvul-SkilBadge-Python Lanjutan-1.png"
+                  alt="Sertifikat Python"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">
+                    Skilvul: Python Lanjutan
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Diterbitkan: Maret 2024
+                  </p>
+                </div>
+              </div>
 
-        <!-- Link to js file -->
-        <script src="js/script.js"></script>
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/sertifikasi/Dicoding_Dasar Manajemen Proyek-1.png"
+                  alt="Sertifikat Manajemen Proyek"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">
+                    Dicoding: Dasar Manajemen Proyek
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Diterbitkan: Maret 2024
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <!-- AOS JS -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+          <!-- TECHSTACK -->
+          <div class="tab-content-item hidden" id="techstack">
+            <div
+              class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 justify-center"
+            >
+              <div class="flex flex-col items-center gap-2">
+                <img
+                  src="https://cdn.simpleicons.org/html5/E34F26"
+                  alt="HTML"
+                  class="h-12 w-12"
+                />
+                <span class="text-sm">HTML</span>
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <img
+                  src="https://cdn.simpleicons.org/css3"
+                  alt="CSS"
+                  class="h-12 w-12"
+                />
+                <span class="text-sm">CSS</span>
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <img
+                  src="https://cdn.simpleicons.org/tailwindcss/06B6D4"
+                  alt="Tailwind"
+                  class="h-12 w-12"
+                />
+                <span class="text-sm">Tailwind</span>
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <img
+                  src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                  alt="JavaScript"
+                  class="h-12 w-12"
+                />
+                <span class="text-sm">JS</span>
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <img
+                  src="https://cdn.simpleicons.org/laravel/FF2D20"
+                  alt="Laravel"
+                  class="h-12 w-12"
+                />
+                <span class="text-sm">Laravel</span>
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <img
+                  src="https://cdn.simpleicons.org/linux/E72424"
+                  alt="Linux"
+                  class="h-12 w-12"
+                />
+                <span class="text-sm">Linux</span>
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <img
+                  src="https://cdn.simpleicons.org/python"
+                  alt="Python"
+                  class="h-12 w-12"
+                />
+                <span class="text-sm">Python</span>
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <img
+                  src="https://cdn.simpleicons.org/github/6D756E"
+                  alt="Github"
+                  class="h-12 w-12"
+                />
+                <span class="text-sm">Github</span>
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <img
+                  src="https://cdn.simpleicons.org/arduino"
+                  alt="Arduino"
+                  class="h-12 w-12"
+                />
+                <span class="text-sm">Arduino</span>
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <img
+                  src="https://cdn.simpleicons.org/mysql"
+                  alt="MySQL"
+                  class="h-12 w-12"
+                />
+                <span class="text-sm">MySQL</span>
+              </div>
+            </div>
+          </div>
 
-        <!-- Lucide Icon CDN -->
-        <script src="https://unpkg.com/lucide@latest"></script>
-        <script>
-            lucide.createIcons();
-        </script>
+          <!-- AWARDEE -->
+          <div class="tab-content-item hidden" id="awardee">
+            <div class="grid md:grid-cols-2 gap-6">
+              <!-- Awardee 1 -->
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/awardee/Sertifikat Semi Final - Samsung Innovation Campus Batch 5 (2023_2024)-1.png"
+                  alt="Semifinalis SIC Batch 5"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">
+                    Semifinalis Samsung Innovation Campus Batch 5
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Samsung Indonesia & Skilvul, 2024
+                  </p>
+                </div>
+              </div>
 
-    </body>
+              <!-- Awardee 2 -->
+              <div
+                class="rounded-xl border dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 overflow-hidden"
+              >
+                <img
+                  src="img/awardee/Juara 3 - TIF Exhibition-1.png"
+                  alt="Juara 3 - TIF Exhibition"
+                  class="w-full h-40 object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  onclick="openModal(this)"
+                />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-2">
+                    Juara 3 Aplikasi Terbaik - TIF Exhibition
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Politeknik Negeri Jember, 2024
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Tabs UI -->
+
+      <!-- Bagian Kontak -->
+      <section
+        class="my-12 bg-white p-8 rounded-xl shadow-md dark:bg-gray-800 dark:text-gray-100"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <h2 class="text-2xl font-semibold mb-6 text-center">Hubungi Saya</h2>
+
+        <div class="space-y-4 max-w-xl mx-auto text-center">
+          <p class="text-gray-700 dark:text-white">
+            Jika Anda tertarik untuk bekerja sama atau ingin ngobrol santai,
+            hubungi saya melalui:
+          </p>
+
+          <div
+            class="flex items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 px-4 py-3 rounded-lg"
+          >
+            <i data-lucide="mail" class="w-5 h-5 text-blue-600"></i>
+            <a
+              href="mailto:bima.iris758@gmail.com"
+              class="text-blue-600 hover:underline"
+              >bima.iris758@gmail.com</a
+            >
+          </div>
+
+          <div
+            class="flex items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 px-4 py-3 rounded-lg"
+          >
+            <i data-lucide="phone" class="w-5 h-5 text-green-500"></i>
+            <a
+              href="https://wa.me/6282264958427"
+              class="text-blue-600 hover:underline"
+              target="_blank"
+              >+62 822-6495-8427</a
+            >
+          </div>
+
+          <div
+            class="flex items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 px-4 py-3 rounded-lg"
+          >
+            <i data-lucide="instagram" class="w-5 h-5 text-pink-500"></i>
+            <a
+              href="https://instagram.com/latansa_bima"
+              class="text-blue-600 hover:underline"
+              target="_blank"
+              >@latansa_bima</a
+            >
+          </div>
+
+          <div
+            class="flex items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 px-4 py-3 rounded-lg"
+          >
+            <i data-lucide="linkedin" class="w-5 h-5 text-sky-600"></i>
+            <a
+              href="https://www.linkedin.com/in/latansa-bima"
+              class="text-blue-600 hover:underline"
+              target="_blank"
+              >Latansa Bima Amanta</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- End Bagian Kontak -->
+
+      <!-- Button Dark Mode -->
+      <button
+        id="darkMode"
+        class="fixed bottom-5 left-5 bg-gray-800 text-white px-4 py-2 rounded-full dark:bg-gray-200 dark:text-gray-800 z-50"
+      >
+        Toggle 🌙 | ☀️
+      </button>
+      <!-- End Button Dark -->
+
+      <!-- Button Scroll to Top -->
+      <button
+        id="scrollTopBtn"
+        class="fixed bottom-5 right-5 hidden bg-gray-800 text-white px-4 py-2 rounded-full dark:bg-gray-200 dark:text-gray-800"
+      >
+        Scroll ⬆
+      </button>
+      <!-- End Button Scroll -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm py-6 text-gray-500 dark:text-gray-400">
+      &copy; 2025 Latansa Bima Amanta
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Link to js file -->
+    <script src="js/script.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Lucide Icon CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
 </html>
